@@ -102,7 +102,7 @@ function App() {
             />
             <label htmlFor="finish">Show Finished</label>
           </div>
-
+          <div className="h-0.5 w-5/6 mx-auto bg-gray-600 opacity-20 my-3"></div>
           <h2 className="font-bold text-xl">Your Todo</h2>
           <div className="todos w-full">
             {todos.length === 0 && (
