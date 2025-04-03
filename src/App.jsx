@@ -94,6 +94,7 @@ function App() {
           </div>
           <div className="flex items-center gap-2 my-3">
             <input
+            className="text-lg"
               id="finish"
               type="checkbox"
               checked={showFinished}
@@ -121,21 +122,21 @@ function App() {
                       checked={item.isCompleted} // ✅ Controlled checkbox
                       onChange={handleCheck}
                     />
-                    <div className={item.isCompleted ? "line-through" : ""}>
+                    <div className={`${item.isCompleted ? "line-through" : ""} text-lg`} >
                       {item.todo}
                     </div>
                   </div>
                   <div className="buttons ml-10 flex h-full ">
                     <button
                       onClick={(e) => handleEdit(e, item.id)}
-                      className="bg-violet-700 hover:bg-violet-900 p-2 py-1 rounded-lg text-white mx-1 font-bold"
+                      className="bg-violet-700 text-xl hover:bg-violet-900 p-2 py-1 rounded-lg text-white mx-1 font-bold"
                     >
                       <FaEdit />
                        
                     </button>
                     <button
                       onClick={(e) => handleDelete(e, item.id)}
-                      className="bg-violet-700 hover:bg-violet-900 p-2 py-1 rounded-lg text-white mx-1 font-bold"
+                      className="bg-violet-700 text-xl hover:bg-violet-900 p-2 py-1 rounded-lg text-white mx-1 font-bold"
                     >
                       <MdDelete />
 
